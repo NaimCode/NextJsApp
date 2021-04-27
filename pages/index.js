@@ -1,13 +1,22 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import NavBar from "../components/Nav";
+import Welcome from "../components/Welcome";
 
+//import MenuIcon from "@material-ui/core/MenuIcon";
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main className={styles.body}>
+        <NavBar></NavBar>
+        <Welcome>
+          {" "}
+          <div class="box">jjjjj</div>;
+        </Welcome>
+      </main>
     </div>
   );
 }

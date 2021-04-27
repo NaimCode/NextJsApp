@@ -1,0 +1,17 @@
+.navCont{
+   position: sticky;
+}
+.logo{
+    object-fit: cover;
+}
+#menuAppBar{
+    margin-left:50px;
+}
+#input{color: white;
+    background-color: rgb(116, 116, 116);
+}
+#search{
+    margin-left: 0px;
+    margin-right: 0px;color: rgb(116, 116, 116);
+   
+}
