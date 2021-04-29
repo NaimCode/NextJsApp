@@ -1,0 +1,27 @@
+.logo {
+  object-fit: cover;
+}
+
+#menuAppBar {
+  margin-left: 50px;
+}
+
+#input {
+  color: white;
+  background-color: #747474;
+}
+#input::placeholder {
+  color: rgba(255, 255, 255, 0.664);
+}
+
+#search {
+  margin-left: 0px;
+  margin-right: 0px;
+  color: #e2d5d5;
+}
+
+.navCont {
+  position: sticky;
+}
+
+/*# sourceMappingURL=AppBar.module.css.map */

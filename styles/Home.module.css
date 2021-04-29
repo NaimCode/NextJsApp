@@ -7,16 +7,51 @@
   display: flex;
   justify-content: center;align-items: center;
 }
+.welcome{display: flex;justify-content: center;align-items: center;flex-direction: column;
+  width: 100%;position: relative;
+   height: 40vh; background-color: rgb(47, 47, 47);
+}
+.backContainer{
+  background-color: rgb(47, 47, 47);
+  position: relative;
+}
+
 .body{
   position: relative;
 }
 #appBar{
   position: sticky;
 }
-
+.title{
+  font-size: 4rem;
+  color: white;
+  font-family: fantasy;
+}
+.title:hover{
+    font-family:fantasy;
+    color: rgb(212, 212, 221);
+}
+.subtitle{
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.637);
+  font-family:cursive;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+}
+#latest{
+  background-color: rgb(175, 130, 130);
+}
+.animeList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#footer{
+  width: 100%;
+  height: 300px;background-color: rgb(54, 54, 54);
 }

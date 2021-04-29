@@ -1,8 +1,9 @@
 import Head from "next/head";
-
-import styles from "../styles/AppBar.module.css";
+import { useEffect, useState } from "react";
+import styles from "../styles/navBar/AppBar.module.css";
 import "../node_modules/bulma/css/bulma.css";
-
+import IconButton from "@material-ui/core/IconButton";
+import Search from "@material-ui/icons/Search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -10,10 +11,16 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 config.autoAddCss = false;
 
-const Nav = () => {
+const Nav = (props) => {
+  console.log(props.setAnime);
+  const fetch = props.setAnime;
+  const [search, setsearch] = useState("");
+  function searchfunction() {
+    fetch(search);
+  }
   return (
     <nav
-      class="navbar is-fixed-top is-dark"
+      class="navbar is-dark is-fixed-top"
       role="navigation"
       aria-label="main navigation"
       id={styles.navCont}
@@ -56,26 +63,21 @@ const Nav = () => {
 
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="control has-icons-right">
+            <div
+              class="control has-icons-right"
+              style={{ display: "flex", alignItems: "center" }}
+            >
               <input
+                onChange={(v) => setsearch(v.target.value)}
                 class="input is-dark"
                 type="text"
                 placeholder="Search for anime"
                 id={styles.input}
               ></input>
+              <IconButton onClick={searchfunction}>
+                <Search style={{ color: "white" }}></Search>
+              </IconButton>
             </div>
-          </div>
-          <div class="navbar-item">
-            <FontAwesomeIcon
-              icon={faSearch}
-              class="button is-outlined is-dark is-hovered"
-              id={styles.search}
-            ></FontAwesomeIcon>{" "}
-            {/* <FontAwesomeIcon
-              icon={faSearch}
-              class="button is-outlined is-dark is-hovered"
-              id={styles.search}
-            ></FontAwesomeIcon> */}
           </div>
         </div>
       </div>
